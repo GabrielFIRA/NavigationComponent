@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/menu">
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.clase11oct22.menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/acMenuPromedio"
+            app:destination="@id/promedio" />
+        <action
+            android:id="@+id/acMenuTabla"
+            app:destination="@id/tabla" />
+        <action
+            android:id="@+id/acMenuLogin"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabla"
+        android:name="com.example.clase11oct22.tabla"
+        android:label="fragment_tabla"
+        tools:layout="@layout/fragment_tabla" />
+    <fragment
+        android:id="@+id/promedio"
+        android:name="com.example.clase11oct22.promedio"
+        android:label="fragment_promedio"
+        tools:layout="@layout/fragment_promedio" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.clase11oct22.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/acLoginWelcome"
+            app:destination="@id/welcome" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.clase11oct22.welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+</navigation>
